@@ -1,0 +1,32 @@
+version: '3'
+services:
+  wishes-php-cli:
+    build:
+      context: .
+      dockerfile: ./docker/php-cli/Dockerfile
+    volumes:
+      - .:/app
+      - composer:/root/.composer/cache
+      - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK       # SSH agent forwarding
+    environment:
+      PHP_IDE_CONFIG: 'serverName=wishes.docker'
+      SSH_AUTH_SOCK: $SSH_AUTH_SOCK         # SSH agent forwarding
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    profiles:
+      - 'cli-tools'        # the profile is needed in order not to start this service with "docker compose up" command
+  wishes-mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB_NAME}
+      MYSQL_USER: ${MYSQL_DB_USER}
+      MYSQL_PASSWORD: ${MYSQL_DB_PASSWORD}
+    ports:
+      - '${MYSQL_DB_HOST_PORT}:3306'
+    volumes:
+      - mysql:/var/lib/mysql
+    restart: always
+volumes:
+  composer:
+  mysql:

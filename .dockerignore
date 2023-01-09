@@ -1,0 +1,5 @@
+# Ignore everything
+**
+
+# ... except for PHP config files
+!./docker/php-cli/*

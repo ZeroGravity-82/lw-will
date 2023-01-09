@@ -1,0 +1,13 @@
+{
+  "name": "ryabkov/wishes",
+  "description": "Wishes - example of the hexagonal architecture project",
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Nikolay Ryabkov",
+      "email": "nikolay.ryabkov@sibers.com",
+      "role": "Developer"
+    }
+  ]
+}
