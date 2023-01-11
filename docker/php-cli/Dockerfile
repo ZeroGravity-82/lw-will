@@ -12,8 +12,7 @@ RUN apt-get update && apt-get install -y unzip \
 # Install Symfony CLI
 COPY --from=ghcr.io/symfony-cli/symfony-cli:5.4.21 /usr/local/bin/symfony /usr/local/bin/symfony
 
-ENV WORKDIR /app/
-WORKDIR ${WORKDIR}
+WORKDIR /app
 
 # PHP configuration
 COPY ./docker/php-cli/conf.d /usr/local/etc/php/conf.d

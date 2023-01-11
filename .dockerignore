@@ -1,5 +1,6 @@
 # Ignore everything
 **
 
-# ... except for PHP config files
+# ... except for PHP and Nginx config files
 !./docker/php-cli/*
+!./docker/nginx/*
