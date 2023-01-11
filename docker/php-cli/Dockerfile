@@ -10,8 +10,7 @@ RUN apt-get update && apt-get install -y unzip \
     && pecl install xdebug-3.2.0 && rm -rf /tmp/pear && docker-php-ext-enable xdebug
 
 # Install Symfony CLI
-RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | bash \
-    && apt-get update && apt-get install -y symfony-cli
+COPY --from=ghcr.io/symfony-cli/symfony-cli:5.4.21 /usr/local/bin/symfony /usr/local/bin/symfony
 
 ENV WORKDIR /app/
 WORKDIR ${WORKDIR}
