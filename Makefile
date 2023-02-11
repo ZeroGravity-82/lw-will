@@ -15,6 +15,8 @@ all:
 init: docker-down-clear docker-pull docker-build composer-install docker-up
 docker-up:
 	$(DOCKER_COMPOSE) up -d
+docker-stop:
+	$(DOCKER_COMPOSE) stop
 docker-down:
 	$(DOCKER_COMPOSE) down --remove-orphans
 docker-down-clear:
