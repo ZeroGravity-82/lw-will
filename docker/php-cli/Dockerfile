@@ -15,7 +15,7 @@ COPY --from=ghcr.io/symfony-cli/symfony-cli:5.4.21 /usr/local/bin/symfony /usr/l
 WORKDIR /app
 
 # PHP configuration
-COPY ./docker/php-cli/conf.d /usr/local/etc/php/conf.d
+COPY conf.d /usr/local/etc/php/conf.d
 
 # Clean the APT cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists

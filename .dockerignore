@@ -1,6 +1,0 @@
-# Ignore everything
-**
-
-# ... except for PHP and Nginx config files
-!./docker/php-cli/*
-!./docker/nginx/*
