@@ -1,6 +1,6 @@
 {
-  "name": "ryabkov/wishes",
-  "description": "Wishes - example of the hexagonal architecture project",
+  "name": "ryabkov/last-wishes",
+  "description": "Last Wishes - example of the hexagonal architecture project",
   "license": "MIT",
   "type": "project",
   "authors": [
@@ -43,12 +43,12 @@
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "Wishes\\": "src/Wishes/"
+      "Lw\\Will\\": "src/Lw/Will/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Wishes\\Tests\\": "tests/"
+      "Lw\\Will\\Tests\\": "tests/Lw/Will/"
     }
   },
   "config": {

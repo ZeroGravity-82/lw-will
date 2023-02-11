@@ -1,5 +1,5 @@
 DOCKER_COMPOSE = docker compose
-PHP_CLI        = $(DOCKER_COMPOSE) run --rm wishes-php-cli
+PHP_CLI        = $(DOCKER_COMPOSE) run --rm lw-will-php-cli
 SYMFONY        = $(PHP_CLI) symfony
 
 getargs    = $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wishes\Infrastructure;
+namespace Lw\Will\Infrastructure;
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;

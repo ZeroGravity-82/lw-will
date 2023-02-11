@@ -1,6 +1,6 @@
 version: '3'
 services:
-  wishes-php-cli:
+  lw-will-php-cli:
     build:
       context: ./docker/php-cli
       dockerfile: Dockerfile
@@ -11,12 +11,12 @@ services:
       - .:/app
       - composer:/tmp/composer-cache
     environment:
-      PHP_IDE_CONFIG: 'serverName=wishes.docker'
+      PHP_IDE_CONFIG: 'serverName=last-wishes.docker'
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     profiles:
       - 'cli-tools'        # the profile is needed in order not to start this service with "docker compose up" command
-  wishes-mysql:
+  lw-will-mysql:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_DB_ROOT_PASSWORD}
@@ -28,7 +28,7 @@ services:
     volumes:
       - mysql:/var/lib/mysql
     restart: always
-  wishes-nginx:
+  lw-will-nginx:
     build:
       context: ./docker/nginx
       dockerfile: Dockerfile
@@ -37,9 +37,9 @@ services:
     volumes:
       - .:/app
     depends_on:
-      - wishes-php-fpm
+      - lw-will-php-fpm
     restart: always
-  wishes-php-fpm:
+  lw-will-php-fpm:
     build:
       context: ./docker/php-fpm
       dockerfile: Dockerfile
@@ -49,7 +49,7 @@ services:
     volumes:
       - .:/app
     depends_on:
-      - wishes-mysql
+      - lw-will-mysql
     restart: always
 volumes:
   composer:

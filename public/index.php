@@ -1,6 +1,6 @@
 <?php
 
-use Wishes\Infrastructure\Kernel;
+use Lw\Will\Infrastructure\Kernel;
 
 require_once dirname(__DIR__) . '/vendor/autoload_runtime.php';
 
