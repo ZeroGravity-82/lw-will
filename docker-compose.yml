@@ -4,13 +4,14 @@ services:
     build:
       context: ./docker/php-cli
       dockerfile: Dockerfile
+      args:
+        - HOST_USER_UID=${HOST_USER_UID}
+        - HOST_USER_GID=${HOST_USER_GID}
     volumes:
       - .:/app
-      - composer:/root/.composer/cache
-      - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK       # SSH agent forwarding
+      - composer:/tmp/composer-cache
     environment:
       PHP_IDE_CONFIG: 'serverName=wishes.docker'
-      SSH_AUTH_SOCK: $SSH_AUTH_SOCK         # SSH agent forwarding
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     profiles:
@@ -35,12 +36,21 @@ services:
       - '${NGINX_HOST_PORT}:80'
     volumes:
       - .:/app
+    depends_on:
+      - wishes-php-fpm
+    restart: always
   wishes-php-fpm:
     build:
       context: ./docker/php-fpm
       dockerfile: Dockerfile
+      args:
+        - HOST_USER_UID=${HOST_USER_UID}
+        - HOST_USER_GID=${HOST_USER_GID}
     volumes:
       - .:/app
+    depends_on:
+      - wishes-mysql
+    restart: always
 volumes:
   composer:
   mysql:
