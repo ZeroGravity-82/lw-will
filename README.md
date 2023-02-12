@@ -1,7 +1,7 @@
 
-# Last Wishes - 'Will' bounded context 
+# Last Wishes Will 
 
-An example of a hexagonal architecture project. It implements the 'Will' bounded context of the Last Wishes application. 
+An example of a hexagonal architecture project. It implements the Will bounded context of the Last Wishes application. 
 
 
 Quickstart
