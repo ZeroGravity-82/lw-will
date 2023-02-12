@@ -15,3 +15,8 @@ Run the following console commands before starting local development.
 export HOST_USER_UID=$(id -u) && export HOST_USER_GID=$(id -g);
 make init
 ```
+
+CLI tools
+---------
+
+For convenient work with the project through Docker, use Makefile. It contains examples of how to use all the CLI tools available to you.
