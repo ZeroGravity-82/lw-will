@@ -43,7 +43,7 @@
   "prefer-stable": true,
   "autoload": {
     "psr-4": {
-      "Lw\\Will\\": "src/Lw/Will/"
+      "Lw\\": "src/Lw/"
     }
   },
   "autoload-dev": {
