@@ -14,6 +14,7 @@
     "php": "^8.2",
     "ext-ctype": "*",
     "ext-iconv": "*",
+    "sibers/lw-ddd-core": "^1.0",
     "symfony/console": "6.2.*",
     "symfony/dotenv": "6.2.*",
     "symfony/flex": "^2",
@@ -39,6 +40,12 @@
   "conflict": {
     "symfony/symfony": "*"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:ZeroGravity-82/lw-ddd-core.git"
+    }
+  ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f29184e489010ba8b410d1e578cee94e",
+    "content-hash": "d960933906bdffbcd6bf365f8bdd4b2b",
     "packages": [
         {
             "name": "psr/cache",
@@ -207,6 +207,60 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.0"
             },
             "time": "2021-07-14T16:46:02+00:00"
+        },
+        {
+            "name": "sibers/lw-ddd-core",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ZeroGravity-82/lw-ddd-core.git",
+                "reference": "9e806a11f7592d2063a390d0b28f96d00c8919c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ZeroGravity-82/lw-ddd-core/zipball/9e806a11f7592d2063a390d0b28f96d00c8919c0",
+                "reference": "9e806a11f7592d2063a390d0b28f96d00c8919c0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lw\\": "src/Lw/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Lw\\DddCore\\Tests\\": "tests/Lw/DddCore/",
+                    "Spy\\Tests\\": "tests/Spy/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ]
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Nikolay Ryabkov",
+                    "email": "nikolay.ryabkov@sibers.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "DDD core library for Last Wishes projects",
+            "support": {
+                "source": "https://github.com/ZeroGravity-82/lw-ddd-core/tree/v1.0.2",
+                "issues": "https://github.com/ZeroGravity-82/lw-ddd-core/issues"
+            },
+            "time": "2023-02-12T04:57:36+00:00"
         },
         {
             "name": "symfony/cache",
