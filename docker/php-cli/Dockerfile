@@ -1,6 +1,6 @@
 FROM php:8.2-cli
 
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.5.1 --quiet
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.5.3 --quiet
 RUN apt-get update && apt-get install -y unzip \
     # extension required for MySQL
     && docker-php-ext-install pdo_mysql \
