@@ -11,7 +11,7 @@ services:
       - .:/app
       - composer:/tmp/composer-cache
     environment:
-      PHP_IDE_CONFIG: 'serverName=last-wishes.docker'
+      PHP_IDE_CONFIG: 'serverName=lw-will.docker'
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     profiles:
